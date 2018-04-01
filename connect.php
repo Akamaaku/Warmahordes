@@ -9,8 +9,6 @@
          $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
          //,array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
      } catch (PDOException $e) {
-         print "Error: " . $e->getMessage();
-         die(); // Force execution to stop on errors.
-         header("Location: errorPage.php");
+         exit("Error: " . $e->getMessage());
      }
  ?>

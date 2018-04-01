@@ -4,7 +4,16 @@
 				 'NF'=> 'Newfoundland and Labrador', 'NS' => 'Nova Scotia', 'ON' => 'Ontario', 'PE' => 'Prince Edward Island', 
 				 'QC' => 'Quebec', 'SK' => 'Saskatchewan', 'NT' => 'Northwest Territories', 'NU' => 'Nunavut', 'YK' => 'Yukon'];
 
-	$handle = fopen('states.csv','r');
+	if(file_exists('data/states.csv'))
+	{
+		$handle = fopen('data/states.csv','r');
+	}
+	
+	if(file_exists('../data/states.csv'))
+	{
+		$handle = fopen('../data/states.csv','r');
+	}
+
  	$states = [];
 
  	while (($data = fgetcsv($handle)) !== FALSE) 

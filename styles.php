@@ -1,5 +1,18 @@
+<?php
+	$css;
+
+	if(file_exists("../styles/bootstrap.css"))
+		$css = "../styles/bootstrap.css";
+
+	if(file_exists("styles/bootstrap.css"))
+		$css= "styles/bootstrap.css";
+
+	if(file_exists("../../styles/bootstrap.css"))
+		$css= "../../styles/bootstrap.css"
+?>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="<?=$css?>" />
 		<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Shojumaru" rel="stylesheet">

@@ -1,12 +1,7 @@
 <?php
 	session_start();
 	include('data/provstate.php');
-
-	$currentYear = date('Y');
-
-	$months = [ 1 => "January", 2 => "February", 3 => "March", 4 => "April", 
-				5 => "May", 6 => "June", 7 => "July", 8 => "August", 
-				9 => "September", 10 => "October", 11 => "November", 12 => "December"];
+	include('data/months.php');
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +36,7 @@
 		<?php include('header.php');?>
 		<?php include('nav.php');?>
 		<h2 class="display-3">Register Your Account</h2>
-		<form class="container bg-dark text-success text-left col-lg-8" method="post" action="addUser.php">
+		<form class="container bg-dark text-success text-left col-lg-8" method="post" action="DB-PHP/addUser.php">
 			<h3>Enter your information here:</h3>
 			<div class="form-group ">
 				<label class="col-lg-4 pl-2 pr-2" for="fname">First Name</label>
